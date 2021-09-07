@@ -1,0 +1,3 @@
+1. tsc --init 
+2. tsc --watch index.ts for continues compiling 
+3. tsconfig.json - outdir : './dist' rootdir: './src'
