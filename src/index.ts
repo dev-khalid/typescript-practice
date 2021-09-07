@@ -64,3 +64,59 @@ let u2: unknown;
 u2 = 'k h a l i d'; 
 let x: string = (<string> u2).split(' ').join(''); 
 console.log(x); 
+
+
+//custom user type
+type User = {
+  id: number, 
+  name: string, 
+  age: number
+}
+const user: User = {
+  id: 1, 
+  name: 'Khalid Hossain Akash', 
+  age: 24
+}
+
+
+//interfaces 
+
+interface UserInterFace   {
+  readonly id: number, 
+  name: String, 
+  
+}
+const user1: UserInterFace = {
+  id: 1, 
+  name: "khalid Hossain Akash"
+}
+// user1.id = 2; 
+
+//interface with function 
+interface MathFunc { 
+  (x: number, y: number): number
+}
+const addNum = (x: number, y: number): number => x+y; 
+console.log(addNum(1,2)); 
+
+//classes
+
+class Person { 
+  private id: number //private means we can not read or write it outside of class . 
+  protected name: string // we can only access protected variables inside an extended class or person
+  public email: string; //by default it's public if we not write it although. 
+
+  constructor(id: number, name: string, email: string) {  
+    this.id = id; 
+    this.name = name; 
+    this.email = email; 
+  }
+  register() { 
+    return `${this.name} with the email: ${this.email} is now registered` 
+  }
+}
+const khalid = new Person(1,'khalid hossain akash', 'khalidhossain727@gmail.com'); 
+console.log(khalid.register()); 
+
+
+//things left to learn but less useful for me .. are generic , class interface 

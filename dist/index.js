@@ -59,3 +59,28 @@ let u2;
 u2 = 'k h a l i d';
 let x = u2.split(' ').join('');
 console.log(x);
+const user = {
+    id: 1,
+    name: 'Khalid Hossain Akash',
+    age: 24
+};
+const user1 = {
+    id: 1,
+    name: "khalid Hossain Akash"
+};
+const addNum = (x, y) => x + y;
+console.log(addNum(1, 2));
+//classes
+class Person {
+    constructor(id, name, email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+    register() {
+        return `${this.name} with the email: ${this.email} is now registered`;
+    }
+}
+const khalid = new Person(1, 'khalid hossain akash', 'khalidhossain727@gmail.com');
+console.log(khalid.register());
+//things left to learn but less useful for me .. are generic , class interface 
