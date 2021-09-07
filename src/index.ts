@@ -118,5 +118,11 @@ class Person {
 const khalid = new Person(1,'khalid hossain akash', 'khalidhossain727@gmail.com'); 
 console.log(khalid.register()); 
 
-
+function getArray<T>(items: T[]): T[] { 
+  return new Array().concat(items); 
+}
+let numArray = getArray<number>([1,2,3]); 
+let strArray = getArray<string>(['khalid','hossain','akash']); 
+strArray.push('bappy'); 
+console.log(strArray); 
 //things left to learn but less useful for me .. are generic , class interface 
